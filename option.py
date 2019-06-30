@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser(description='MGN')
+parser = argparse.ArgumentParser(description='Base')
 
 parser.add_argument('--nThread', type=int, default=2, help='number of threads for data loading')
 parser.add_argument('--cpu', action='store_true', help='use cpu only')
