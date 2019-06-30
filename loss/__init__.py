@@ -54,7 +54,7 @@ class Loss(nn.modules.loss._Loss):
     def forward(self, outputs, labels):
         losses = []
         for i, l in enumerate(self.loss):
-            if self.args.model == 'MGN' and l['type'] == 'CrossEntropy':
+            if self.args.model == 'Base' and l['type'] == 'CrossEntropy':
                 loss = [l['function'](output, labels) for output in outputs[1:]]
                 loss = sum(loss) / len(loss)
                 effective_loss = l['weight'] * loss

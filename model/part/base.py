@@ -95,12 +95,12 @@ class Base(nn.Module):
         p = self.p(x)
 
         zp = self.pool_zp(p)
-        z1_p = zp1[:, :, 0:1, :]
-        z2_p = zp1[:, :, 1:2, :]
-        z3_p = zp1[:, :, 2:3, :]
-        z4_p = zp1[:, :, 3:4, :]
-        z5_p = zp1[:, :, 4:5, :]
-        z6_p = zp1[:, :, 5:6, :]
+        z1_p = zp[:, :, 0:1, :]
+        z2_p = zp[:, :, 1:2, :]
+        z3_p = zp[:, :, 2:3, :]
+        z4_p = zp[:, :, 3:4, :]
+        z5_p = zp[:, :, 4:5, :]
+        z6_p = zp[:, :, 5:6, :]
 
         f1_p = self.reduction_1(z1_p).squeeze(dim=3).squeeze(dim=2)
         f2_p = self.reduction_2(z2_p).squeeze(dim=3).squeeze(dim=2)

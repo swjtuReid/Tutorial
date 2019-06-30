@@ -44,8 +44,8 @@ class Base(nn.Module):
         self.pool_p = pool2d(kernel_size=(24, 8))
 
         #1x1卷积层，降维
-        reduction = nn.Sequential(nn.Conv2d(2048, args.feats, 1, bias=False), nn.BatchNorm2d(args.feats), nn.ReLU())
-        self._init_reduction(reduction)
+        self.reduction = nn.Sequential(nn.Conv2d(2048, args.feats, 1, bias=False), nn.BatchNorm2d(args.feats), nn.ReLU())
+        self._init_reduction(self.reduction)
 
         #全连接层
         self.fc = nn.Linear(feats, num_classes)

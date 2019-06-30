@@ -18,7 +18,7 @@ parser.add_argument("--batchimage", type=int, default=4, help='the batch of per 
 parser.add_argument("--batchtest", type=int, default=32, help='input batch size for test')
 parser.add_argument('--test_only', action='store_true', help='set this option to test the model')
 
-parser.add_argument('--model', default='MGN', help='model name')
+parser.add_argument('--model', default='Base', help='model name')
 parser.add_argument('--loss', type=str, default='1*CrossEntropy+1*Triplet', help='loss function configuration')
 
 parser.add_argument('--act', type=str, default='relu', help='activation function')
